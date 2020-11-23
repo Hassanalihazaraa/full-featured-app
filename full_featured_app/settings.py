@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-from .credientials import SECRET_KEY
+from .credientials import PASSWORD, SECRET_KEY, USER
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'full_featured_app',
-        'USER': 'becode',
-        'PASSWORD': 'becode123',
+        'USER': USER,
+        'PASSWORD': PASSWORD,
         'HOST': 'localhost',
         'PORT': '5432',
     }
