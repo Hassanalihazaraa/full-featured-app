@@ -138,6 +138,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+# full path to a folder to store uploaded pictures
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# media folder path
+MEDIA_URL = '/media/'
+
 # crispy setting
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
