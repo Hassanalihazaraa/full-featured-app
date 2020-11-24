@@ -1,4 +1,3 @@
-from django.db.models.fields import PositiveSmallIntegerField
 from django.shortcuts import render
 from .models import Post
 
