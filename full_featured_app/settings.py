@@ -143,3 +143,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # login redirect url to home page
 LOGIN_REDIRECT_URL = 'home'
+
+# redirect the user to login when not authenticated
+LOGIN_URL = 'login'
