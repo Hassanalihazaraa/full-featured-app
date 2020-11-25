@@ -1,5 +1,3 @@
-from django.contrib.messages.api import debug
-from django.http import request
 from django.shortcuts import render
 from .models import Post
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
