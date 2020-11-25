@@ -5,6 +5,7 @@ from django.views.generic import (
     ListView,
     DetailView,
     CreateView,
+    UpdateView
 )
 
 
@@ -20,6 +21,15 @@ class PostDetailView(DetailView):
 
 
 class PostCreatView(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = ['title', 'content']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+
+class PostUpdateView(LoginRequiredMixin, UpdateView):
     model = Post
     fields = ['title', 'content']
 
