@@ -1,6 +1,7 @@
+from django.db import connection
 from django.shortcuts import redirect, render
 from django.contrib import messages
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -20,4 +21,11 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'users/profile.html')
+    user_form = UserUpdateForm()
+    profile_form = ProfileUpdateForm()
+
+    context = {
+        'user_form': user_form,
+        'profile_form': profile_form,
+    }
+    return render(request, 'users/profile.html', context)
