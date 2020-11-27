@@ -4,7 +4,7 @@
 - User can edit their profile with profile picture functionality
 - Users can create posts
 - Users can edit and delete their posts
+- Users can see other users posts
 - Added pagination to limit the number of posts
-- See all posts of a user
 - Send reset password mail to user and save the new password to database
-- 
+- Secured routes
